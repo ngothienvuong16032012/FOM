@@ -1,5 +1,4 @@
 import streamlit as st
-import google.generativeai as genai
 import time
 
 # ===== CONFIG =====
@@ -140,12 +139,8 @@ elif trang == "Khám phá nhạc":
 else:
     st.title("📌 Giới thiệu")
     st.write("App khám phá âm nhạc theo cảm xúc ")
-    st.write("bạn có thể cho tôi thêm một gợi ý để phát triển trong tương lai không")
-    import google.generativeai as genai
-    genai.configure(api_key=  "AIzaSyBHM5L55LzvpgDoBbxRQgqCsorvUKZFCGE")                                                                                                                                                   
-    model = genai.GenerativeModel('models/gemma-3-27b-it')
+    st.write("bạn có thể cho tôi thêm một gợi ý để phát triển trong tương lai không")                                                                                                                                                
     user_input = st.text_input("Bạn đang cảm thấy thế nào?Có thể giúp tôi đưa ra hướng đi tương lai chứ")
     if user_input:
-        model = genai.GenerativeModel('models/gemma-3-27b-it')
-        response = model.generate_content(user_input)
-        st.write(response.text)
+        st.write("cảm ơn vì những đóng góp của bạn cho dự án?Chúc bạn có một trải nghiệm tuyệt vời")
+        
